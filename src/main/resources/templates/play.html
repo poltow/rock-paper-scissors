@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+td {
+	text-align: right;
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script.js"></script>
+<title>Rock Paper Scissors</title>
+</head>
+<body onload="initGame()">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Lets play</h3>
+			</div>
+		</div>
+		<div id="userName"></div>
+		<br>
+		<div id="strategy"></div>
+		<br>
+
+		<form action="/" onsubmit="return deleteGame()">
+			<input type="submit" value="End game/Change user" />
+		</form>
+	</div>
+	<hr>
+	<table>
+		<tbody>
+			<tr>
+				<td><input type="button" value="Play Round"
+					onclick="return playRound()" /></td>
+				<td><input type="button" value="Restart Game"
+					onclick="return restartGame()" /></td>
+				<td><input type="button" value="Show Users History"
+					onclick="return showHistory()" /></td>
+
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<div id="roundsTable"></div>
+	<div id="usersHistory"></div>
+</body>
+</html>
