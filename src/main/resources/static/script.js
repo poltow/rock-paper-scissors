@@ -159,14 +159,18 @@ function showHistory() {
 			for (x in myObj) {
 				txt += "<tr><td style=\"text-align:left\">"
 						+ myObj[x].userName + "</td>";
+				
+				txt += "<td>" + myObj[x].total + "</td>";
+				totals += parseInt(myObj[x].total);
+
 				txt += "<td>" + myObj[x].wins + "</td>";
 				total_wins += parseInt(myObj[x].wins);
+				
 				txt += "<td>" + myObj[x].loses + "</td>";
 				total_loses += parseInt(myObj[x].loses);
-				txt += "<td>" + myObj[x].draws + "</td>";
+				
+				txt += "<td>" + myObj[x].draws + "</td></tr>";
 				total_draws += parseInt(myObj[x].draws);
-				txt += "<td>" + myObj[x].total + "</td></tr>";
-				totals += parseInt(myObj[x].total);
 			}
 
 			txt += "</table>"
@@ -178,10 +182,10 @@ function showHistory() {
 			txt += "<th>Nº of loses</th>";
 			txt += "<th>Nº of draws</th>";
 			txt += "</tr>";
+			txt += "<td>" + totals + "</td>";
 			txt += "<td>" + total_wins + "</td>";
 			txt += "<td>" + total_loses + "</td>";
-			txt += "<td>" + total_draws + "</td>";
-			txt += "<td>" + totals + "</td></tr>";
+			txt += "<td>" + total_draws + "</td></tr>";
 			txt += "</table>"
 			document.getElementById("usersHistory").innerHTML = txt;
 
