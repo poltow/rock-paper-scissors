@@ -1,5 +1,4 @@
-# Rock Paper Scissors CODE CHALLENGE 
-
+# Rock Paper Scissors in SpringBoot
 Requirements: 
 
     First part:
